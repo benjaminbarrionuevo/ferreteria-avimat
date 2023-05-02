@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <title>Confirmar Cotizacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" a href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="Style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div>
+            <h2 align="center">CONFIRMAR COTIZACION</h2>
+            <br>
+            <p align="center">Este es tu pedido</p>
+            <br>
+            
+            <button type="submit">
+                <a href="/cotizar/CotizarOnline">Agregar mas productos</a>
+            </button>
+            
+        </div>
+        <header
+            <div class="container">
+            <h2>Si esta todo bien, confirmanos tus datos y te enviamos el presupuesto!</h2>
+            </div>
+        </header>
+        <div class="container">
+            
+            <form action="/cotizacion/confirmacion" method="POST">
+                
+                <div class="form-group">
+                    <label>Nombre y Apellido</label>
+                    <input type="text" class="form-group" name="NombreApellido" placeholder="Nombre y Apellido">
+                </div>
+                
+                <div class="form-group">
+                    <label>N° Telefono</label>
+                    <input type="number" class="form-group" name="Numero" placeholder="N° Telefono">
+                </div>
+                
+                <div class="form-group">
+                    <label>Mail</label>
+                    <input type="email" class="form-group" name="Mail" placeholder="Mail">
+                </div>
+                
+                <div class="form-group">
+                    <label>Nombre empresa</label>
+                    <input type="text" class="form-group" name="NombreEmpresa" placeholder="Nombre de empresa">
+                </div>
+            
+                <button type="submit" class="btn btn-primary">CONFIRMAR PEDIDO DE PRESUPUESTO</button>
+                
+            </form>
+        </div>
+        
+    </body>
+</html>
